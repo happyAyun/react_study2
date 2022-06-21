@@ -27,6 +27,8 @@ const Home = () => {
 
   const increaseMonth = () => {
     setCurDate(new Date(curDate.getFullYear(), curDate.getMonth() + 1, curDate.getDate()));
+    // getDate(): 며칠
+    // getDay(): 일요일:0 ~ 토요일:6
   };
 
   const decreaseMonth = () => {
