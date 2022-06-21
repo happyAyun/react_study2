@@ -7,7 +7,7 @@ import DiaryList from "./../components/DiaryList";
 
 const Home = () => {
   const diaryList = useContext(DiaryStateContext);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([]); // 처음 data는 빈 배열
   const [curDate, setCurDate] = useState(new Date());
   const headText = `${curDate.getFullYear()}년 ${curDate.getMonth() + 1}월`;
 
@@ -26,11 +26,11 @@ const Home = () => {
   }, [diaryList, curDate]);
 
   const increaseMonth = () => {
-    setCurDate(new Date(curDate.getFullYear(), curDate.getMonth() + 1), curDate.getDate());
+    setCurDate(new Date(curDate.getFullYear(), curDate.getMonth() + 1, curDate.getDate()));
   };
 
   const decreaseMonth = () => {
-    setCurDate(new Date(curDate.getFullYear(), curDate.getMonth() - 1), curDate.getDate());
+    setCurDate(new Date(curDate.getFullYear(), curDate.getMonth() - 1, curDate.getDate()));
   };
 
   return (

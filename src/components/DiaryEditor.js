@@ -43,7 +43,7 @@ const DiaryEditor = ({ isEdit, originData }) => {
         onEdit(originData.id, date, content, emotion);
       }
     }
-    navigate("/", { replace: true }); // replace : 뒤로가기를 못하도록
+    navigate("/", { replace: true }); // replace : 뒤로가기 시 재저장됨 방지
   };
 
   const handleRemove = () => {
